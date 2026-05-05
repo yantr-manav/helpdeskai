@@ -6,10 +6,10 @@ We run the same RAG pipeline as the web widget.
 
 from fastapi import APIRouter, Request, Form, Response
 from fastapi.responses import PlainTextResponse
-from app.services.rag_engine import RAGEngine
-from app.services.ticket_service import TicketService
-from app.services.whatsapp_session import WhatsAppSessionManager
-from app.config import get_settings
+from ..services.rag_engine import RAGEngine
+from ..services.ticket_service import TicketService
+from ..services.whatsapp_session import WhatsAppSessionManager
+from ..config import get_settings
 import httpx
 import re
 
@@ -161,7 +161,7 @@ async def handle_ticket_flow(
         await session_mgr.clear_ticket_state(phone)
 
         # Create ticket
-        from app.models.schemas import TicketCreate
+        from ..models.schemas import TicketCreate
         ticket = await ticket_svc.create(
             TicketCreate(
                 session_id=f"wa:{phone}",
