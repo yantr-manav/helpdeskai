@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import StreamingResponse
-from app.models.schemas import ChatRequest, ChatResponse, StreamChatRequest
-from app.services.rag_engine import RAGEngine
+from ..models.schemas import ChatRequest, ChatResponse, StreamChatRequest
+from ..services.rag_engine import RAGEngine
 
 router = APIRouter()
 

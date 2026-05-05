@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request, HTTPException
-from app.models.schemas import TicketCreate, Ticket, TicketUpdate
-from app.services.ticket_service import TicketService
+from ..models.schemas import TicketCreate, Ticket, TicketUpdate
+from ..services.ticket_service import TicketService
 
 router = APIRouter()
 

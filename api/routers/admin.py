@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Request, HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from app.models.schemas import AdminLogin, TokenResponse, TicketUpdate
-from app.config import get_settings
-from app.services.ticket_service import TicketService
+from ..models.schemas import AdminLogin, TokenResponse, TicketUpdate
+from ..config import get_settings
+from ..services.ticket_service import TicketService
 import jwt
 from datetime import datetime, timedelta
 
