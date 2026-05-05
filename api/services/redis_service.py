@@ -1,6 +1,6 @@
 import json
 import redis.asyncio as aioredis
-from app.config import get_settings
+from ..config import get_settings
 
 settings = get_settings()
 

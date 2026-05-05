@@ -113,7 +113,7 @@ from qdrant_client.models import (
     Distance, VectorParams, PointStruct,
     ScoredPoint
 )
-from app.config import get_settings
+from ..config import get_settings
 from sentence_transformers import SentenceTransformer
 from openai import AsyncOpenAI
 import uuid

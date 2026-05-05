@@ -8,9 +8,9 @@ RAG Pipeline:
 """
 
 import anthropic
-from app.config import get_settings
-from app.services.qdrant_service import QdrantService
-from app.services.redis_service import RedisService
+from ..config import get_settings
+from .qdrant_service import QdrantService
+from .redis_service import RedisService
 from typing import AsyncGenerator, Optional
 
 settings = get_settings()

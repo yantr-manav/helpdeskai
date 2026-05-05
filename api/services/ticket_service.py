@@ -3,8 +3,8 @@ import uuid
 import shortuuid
 from datetime import datetime
 import redis.asyncio as aioredis
-from app.config import get_settings
-from app.models.schemas import Ticket, TicketCreate
+from ..config import get_settings
+from ..models.schemas import Ticket, TicketCreate
 
 settings = get_settings()
 
